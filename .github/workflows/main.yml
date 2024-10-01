@@ -8,9 +8,9 @@ on:
 env:
   AWS_REGION: ap-southeast-1
   ECR_REPOSITORY: ecs-repo
-  ECS_SERVICE: service-ecs
+  ECS_SERVICE: service-ecs-new
   ECS_CLUSTER: ecs-cluster
-  ECS_TASK_DEFINITION: ecs-task-def
+  ECS_TASK_DEFINITION: ecs-new-tf
   CONTAINER_NAME: ecs-container
 
 jobs:
