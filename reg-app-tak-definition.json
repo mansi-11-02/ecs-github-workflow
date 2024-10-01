@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:288761750357:task-definition/ecs-task-def:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:288761750357:task-definition/ecs-new-tf:1",
     "containerDefinitions": [
         {
             "name": "ecs-container",
-            "image": "288761750357.dkr.ecr.ap-southeast-1.amazonaws.com/27-rep:latest",
+            "image": "288761750357.dkr.ecr.ap-southeast-1.amazonaws.com/ecs-repo:27b903a2170f08313da506736ebb46baeee0e664",
             "cpu": 0,
             "portMappings": [
                 {
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/ecs-task-def",
+                    "awslogs-group": "/ecs/ecs-new-tf",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,8 +35,7 @@
             "systemControls": []
         }
     ],
-    "family": "ecs-task-def",
-    "taskRoleArn": "arn:aws:iam::288761750357:role/ecsTaskExecutionRole",
+    "family": "ecs-new-tf",
     "executionRoleArn": "arn:aws:iam::288761750357:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -57,9 +56,6 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -88,7 +84,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-01T06:54:58.938Z",
+    "registeredAt": "2024-10-01T07:25:35.583Z",
     "registeredBy": "arn:aws:iam::288761750357:root",
     "tags": []
 }
